@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+body{
+    border-style: double;
+    border-radius: 10px;
+    border-color: blue;
+    background-image:repeating-radial-gradient(pink ,aqua ,green) ;
+    background-repeat: no-repeat;
+   
+}
+@keyframes st{
+    from{border-style: double;}
+    to{border-style: dotted;}
+    from{border-color:yellow};
+    to{border-color: blue;}
+
+   
+}
+.st{
+    width: 300px;
+   
+    background-image: linear-gradient(to right,rgb(240, 241, 221),pink);
+    animation-name: st;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    border-style: groove;
+    border-radius: 10px;
+   
+}
+
+
+button{
+    border: none;
+    width: 100px;
+    height: 30px;
+    color: rgb(153, 30, 210);
+}
+
+.i{
+    border-radius: 20px;
+    background-image: -moz-linear-gradient(to right,rgb(168, 231, 22),red);
+}
+img{
+    border: none;
+    border-radius: 30px;
+}
+.ac{
+    width: 70px;
+    animation-name: vi;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes vi{
+    0%{transform: rotate(0deg);}
+    10%{transform: rotate(-1deg);}
+    20%{transform: rotate(1deg);}
+    30%{transform: rotate(0deg);}
+    40%{transform: rotate(1deg);}
+    50%{transform: rotate(-1deg);}
+    60%{transform: rotate(0deg);}
+    70%{transform: rotate(-1deg);}
+    80%{transform: rotate(1deg);}
+    90%{transform: rotate(0deg);}
+    100%{transform: rotate(-1deg);}
+}
+h4{  margin-left: 100px;
+    display: flex;
+}
+.an{
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+}
+input{
+    border-radius: 20px;
+    border-color: aqua;
+}
+p{
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input:hover{
+    border-color: brown;
+}
+h1{
+    color: yellowgreen;
+}
+button{
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: yellow;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<center><div  class="i" > <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86QjID5IzNGnQaER1NttL3oSY6MaMRi386EIY80PoFw&s" alt="please wait" srcset="" ></div>
+<figcaption><strong><em style="border-image-source: url(https://cdn.pixabay.com/photo/2016/09/06/15/16/autumn-1649362_960_720.jpg); border-style: groove; border-radius: 20px; border-image-slice: 40;border-image-slice: 50;" id="li">Library Management</em></strong></figcaption>
+
+
+</div>
+<div class="st" style="padding: 20px;">
+   <div class="a2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3wlmTO2pKRJT4_GqEI40Tb9fLO0ezguUYbu13RM13qWIs2ssj1qrkmrnLvV81of0KfN4&usqp=CAU" alt="please wait" srcset="" class="ac"></div>
+      <h1 style="margin-left: 20px;">Renewal  Book Status</h1>
+   <div style="margin-top: 30px;" id="se">
+      
+        <p>Student Name</p>
+        <input type="text" id="in1">
+        <p>Student ID:</p>
+        <input type="text" id="in2">
+       
+        <p>Department</p>
+      
+        <select id="se">
+            
+            <option value="HISTORY" name="op"> </option>
+            <option value="MECH" name="op">MECH</option>
+            <option value="EEE" name="op">EEE</option>
+            <option value="ECE" name="op">ECE</option>
+            <option value="CSE" name="op">CSE</option>
+        </select>
+        
+        <p>Book Title</p>
+        <input type="text" id="in2">
+        <p>Accession No</p>
+        <input type="number" id="in2">
+        <br>
+        <br>
+        <button onclick="su()">submit</button>
+      
+    </div>
+      <h4 ><p>Status:</p><div class="an"><p id="i">None</p></div></h4>
+    
+  <button onclick="ba()">Back</button>
+  <script>
+      function su(){
+        let s= confirm('Do you want renewal this book?');
+        if(s==true)
+        {
+            document.getElementById('i').innerHTML='Wait few minitues'
+        }
+      }
+       function ba()
+       {
+           open("mainpage.html")
+       }
+  </script>
+
+</div>
+
+</center> 
+</body>
+</html>

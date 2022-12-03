@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library Management</title>
+    <style>
+        body{
+            background-image: radial-gradient(yellow,blue,pink);
+            background-repeat: no-repeat;
+           
+        }
+        .ac{
+            width: 70px;
+            animation-name: vi;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            border-radius: 30px;
+            margin-top: 10px;
+        }
+        @keyframes vi{
+            0%{transform: rotate(0deg);}
+            10%{transform: rotate(-1deg);}
+            20%{transform: rotate(1deg);}
+            30%{transform: rotate(0deg);}
+            40%{transform: rotate(1deg);}
+            50%{transform: rotate(-1deg);}
+            60%{transform: rotate(0deg);}
+            70%{transform: rotate(-1deg);}
+            80%{transform: rotate(1deg);}
+            90%{transform: rotate(0deg);}
+            100%{transform: rotate(-1deg);}
+        }
+        .ma{
+            width: 50%;
+           height: 100%;
+            background-image: linear-gradient(to right,green,orange);
+            border-radius: 10px;
+            border-style: ridge;
+            animation-name: st;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            
+        }
+        @keyframes st{
+            from{border-style: double;}
+            to{border-style: dotted;}
+            from{border-color:yellow};
+            to{border-color:#C5908E ;}
+        }
+         .f{
+            justify-content: center;
+             display: flex;
+             margin-left: 10px;
+             margin-bottom: 20px;
+         }
+        
+         #se{
+             border-radius: 40px;
+             border-color: aqua;
+             width: 160px;
+         }
+         .se1{
+             border-radius: 3px;
+             border: solid ;
+             background-color: blue;
+             border-color: blue;
+         }
+         th{
+             border-style: groove;
+             border-spacing: 20px;
+             width: 95px;
+             
+         }
+         .ff{
+             width: 50%;
+            height: 100%;
+             border: groove;
+         }
+         #im{
+             border-radius: 40px;
+         }
+         button{
+             border-radius: 10px;
+             border: none;
+             width: 70px;
+         }
+         h1{
+             font-style: italic;
+             
+         }
+         #li{
+            animation-name: li;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes li{
+            from{color: brown;}
+            to{color: yellow;}
+        }
+        label{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(150, 36, 144);
+            font-size: small;
+           
+        }
+        label:hover{
+            background-color: aqua;
+        }
+        input{
+            background-color: white;
+        }
+        input:hover{
+            background-color: aqua;
+        }
+        .ff>:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+       
+         <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86QjID5IzNGnQaER1NttL3oSY6MaMRi386EIY80PoFw&s" alt="please wait" srcset="" id="im" >
+            <figcaption><strong><em style="border-image-source: url(https://cdn.pixabay.com/photo/2016/09/06/15/16/autumn-1649362_960_720.jpg); border-style: groove; border-radius: 20px; border-image-slice: 40;border-image-slice: 50;" id="li">Library Management</em></strong></figcaption>
+            
+            
+            <div class="ma">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3wlmTO2pKRJT4_GqEI40Tb9fLO0ezguUYbu13RM13qWIs2ssj1qrkmrnLvV81of0KfN4&usqp=CAU" alt="please wait" srcset="" class="ac">
+        
+            <h2 style="color: blue;">Book arranged in Author wise </h2>
+       <div class="f"> <div ><input type="text" placeholder="serach..." id="se" onmousemove="ch()" onmouseout="uch()"></div>
+        <img src="https://cdn.pixabay.com/photo/2017/03/19/03/48/material-icon-2155442_960_720.png" alt="" style="width: 40px;" onclick="h()">
+        <script>
+            function ch()
+            {
+                document.getElementById('se').style.borderColor='blue';
+            }
+            function uch()
+            {
+                document.getElementById('se').style.borderColor='yellow';
+            }
+
+            function h(){
+                let search=document.getElementById('se').value;
+                var searry=['siva','kumar','dhinesh','chank'];
+                if(search==null||search=="")
+                {
+                    alert('please enter the author name');
+                }
+                else{
+                    document.getElementById('i').innerHTML='No records'
+
+                }
+                for(var i=0;i<4;i++)
+                {
+                    if(search==searray[i])
+                }
+                
+
+            }
+            function ch1(){
+                document.getElementById('gg').style.backgroundColor='white';
+
+            }
+           function ch2(){
+                       document.getElementById('gg').style.backgroundColor='#C7A317';
+
+               }
+               function{
+                var array=[];
+                var ff;
+                var chec=document.querySelectorAll('input[type=checkbox]:checked');
+                for(i=0;i<chec.length;i++)
+                {
+                    array.push(chec[i].value);
+                    ff=chec.length;
+                }
+                for(i=0;i<ff;i++)
+                {
+                   if(chec[i]===search)
+                   {
+                       document.write('1');
+                   }
+                   else{
+                       document.write('2');
+                   }
+                }
+               }
+        </script>
+    </div>
+    
+    <table>
+        <tr>
+           <th style="border-radius: 15px;">Book Name</th>
+           <th style="border-radius: 15px;">Book Author</th>
+
+        </tr>
+      
+    </table>
+    <div class="ff" style="border-radius: 10px;" onmousemove="ch1()" id="gg" onmouseleave="ch2()">
+        <p id="i"></p>
+        <ol>
+            <li><label for="no1">History of India</label>
+        <input type="checkbox" name="no1" id="no1" style="position: sticky; left: 60%;" value="siva">
+       </li>
+        <br>
+       <li> <label for="no1">Database Management System</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="siva">
+    </li>
+        <br>
+        <li><label for="no1">Operating System</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value='dhinesh'>
+    </li>
+        <br>
+        <li><label for="no1">Airpollution & Control Enginnering</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="chank">
+    </li>
+        <br>
+        <li><label for="no1">Computer Network</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;"value='siva'>
+    </li>
+        <br>
+        <li> <label for="no1">Algebric System</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="siva">
+    </li>
+        <br>
+        <li><label for="no1">Astrophysics</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="chank">
+    </li>
+        <br>
+        
+        <li><label for="no1">Chemical science</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="dhinesh">
+    </li>
+        <br>
+        <li><label for="no1">thrukkural</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="kumar">
+    </li>
+        <br>
+        <li><label for="no1">Data structure</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="siva">
+    </li>
+        <br>
+        <li><label for="no1">Communication Engineering</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="chank">
+    </li>
+        <br>
+        <li> <label for="no1">Software Engineering</label>
+        <input type="checkbox" name="no1" id="no1"  style="position: sticky; left: 60%;" value="kumar">
+    </li>
+    </ol>
+        
+    </div>
+    <button onclick="request()">Request</button>
+
+<button style="margin-top: 20px;" onclick="back()">Back</button>
+<script>
+    function request()
+    {
+        alert('request is sended');
+    }
+    function back()
+    {
+        open('mainpage.html');
+    }
+</script>
+</div>
+
+
+</center>
+    
+</body>
+</html>

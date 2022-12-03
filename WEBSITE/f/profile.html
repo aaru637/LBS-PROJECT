@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      body{
+        background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+        background-repeat: no-repeat;
+        height: 1500px;
+       
+      }
+      p{
+          font-style: italic;
+      }
+     
+        #user{
+           display: flex;
+           margin-top: 20px;
+           margin-bottom: 20px;
+        }
+       
+        #email{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #email>p{
+             flex: 1;
+        }
+        #password{
+            display: flex;
+        }
+        #password>p{
+             flex: 1;
+        }
+
+        #ce{
+            margin-top: 30px;
+            width: 300px;
+          
+          
+            padding-top: 30px;
+            justify-content: center;
+            text-align: center;
+            border-style: outset;
+            border-radius: 20px;
+            border-color: aqua;
+        }
+        button{
+            color: rgb(201, 166, 92);
+            border: none;
+            font: italic;
+            background-color: rgb(0, 255, 149);
+        }
+        button:hover{
+            background-color: red;
+        }
+        #b1{
+            color: blue;
+            
+        }
+        img{
+            border-radius: 50px;
+        }
+        #phone{
+            margin-top: 20px;
+            display: flex;
+        }
+        #phone>p{
+             flex: 1;
+        }
+        #b2{
+            color: rgb(0, 47, 255);
+            font: 1em ;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: medium;
+           
+        }
+        #b31{
+            color: green;
+            
+        }
+        #b32{
+            color: green;
+        }
+        #b33{
+            color: green;
+        }
+        #b34{
+            color: green;
+        }
+       
+    </style>
+  
+</head>
+<body>
+    <center>
+        <div id="ce">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3wlmTO2pKRJT4_GqEI40Tb9fLO0ezguUYbu13RM13qWIs2ssj1qrkmrnLvV81of0KfN4&usqp=CAU" alt="please wait" srcset="edite the photo" class="ac" onclick="pro()">
+    <br>
+    <div id="user">
+    <p id="b2">Userid:</p>
+    <p id='b31'>SivasakthiRajammal</p>
+    </div>
+    
+    <div id="email" ><p id="b2">Email:</p>
+    <p id="b32">apjakgvs7@gmail.com</p> <button style="width: 70px; border-radius: 20px; margin-left: 20px;" onclick="email()"><p id="b1">Edit</p></button ></div>
+    <div id="password"><p id="b2">Password:</p>
+        <p id="b33" class='f3' type='password'>Sripriya2377328@</p><button style="width: 70px; border-radius: 20px; margin-left: 20px;" onclick="password()"><p id="b1">Edit</p></button></div>
+        <div id="phone"><p id="b2">PhoneNumber:</p>
+            <p id="b34"  >9789519416</p><button style="width: 70px; border-radius: 20px; margin-left: 35px;" onclick="phone()"><p id="b1">Edit</p></button></div>
+              <button style="border-radius:20px ; color: blue; width: 70px;" onclick="submit()" ><p>submit</p></button>
+              <br>
+            <button style="width: 70px; border-radius: 20px; margin-top: 20px; " onclick="back()"><p id="b1">Back</p></button>
+    </div>
+    </center>
+    <script>
+        function submit()
+        {
+            
+        }
+        function phone()
+        {
+           var co=confirm('do you want change the phone number?');
+           if(co==true)
+           {
+               let ch=prompt("Enter the new phone number");
+               document.getElementById('b34').innerHTML=ch;
+           }
+        }
+        function password()
+        {
+           var co=confirm('do you want change the password?');
+           if(co==true)
+           {
+               let ch=prompt("Enter the new password");
+               if(ch.length>=8){
+               document.getElementById('b33').innerHTML=ch;
+               }
+               else{
+                   alert('please enter the more than 8 characters');
+               }
+           }
+
+        }
+        function email()
+        {
+           var co=confirm('do you want change the Email?');
+           if(co==true)
+           {         var x=prompt('Enter the new Email');
+                      var atposition=x.indexOf("@");  
+                      var dotposition=x.lastIndexOf(".");  
+                      if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                      alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                
+                      }  
+                      else{
+                          document.getElementById('b32').innerHTML=x;
+                      }
+                 }  
+
+           }
+           function back()
+           {
+               open('mainpage.html')
+           }
+        
+    </script>
+
+</body>
+</html>

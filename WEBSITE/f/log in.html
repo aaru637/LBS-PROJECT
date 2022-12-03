@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        p{
+            font-size: smaller;
+        }
+        body{
+            
+           
+            background-repeat: no-repeat;
+           animation: d 15s infinite;
+           
+        }
+        @keyframes d{
+            from{background-image: url('https://images.pexels.com/photos/870802/pexels-photo-870802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
+            to{background-image: url('https://images.pexels.com/photos/2101187/pexels-photo-2101187.jpeg');}
+        }
+
+      
+        .f1{
+           
+            margin-top: 9%;
+            width: 300px;
+           background-image: linear-gradient(to left,rgb(240, 241, 221),yellow);
+           border-radius: 10px;
+           
+           
+        }
+       
+        }
+        img{
+            border-style: none;
+            border-radius: 100px;
+           
+           
+           
+        }
+        .f2{
+            width: 200px;
+            
+            
+            
+            font-style: italic;
+           
+        }
+        .f3{
+            width: 200px;
+          
+        }
+
+        button{
+            color: aqua;
+            background-color:blue;
+        }
+        h1{
+            color: aqua;
+        
+           
+        }
+       
+        input{
+            border-style: solid;
+            border-radius: 20px;
+            border-color: aqua;
+        }
+     
+        p{
+            font-size: large;
+            
+        }
+      
+     input:hover{
+         border-color: rgb(183, 0, 255);
+         border-radius: 10px;
+       
+     }
+     button{
+         border: none;
+         width: 90px;
+         margin-top: 10px;
+         border-radius: 20px;
+         color: aqua;
+        
+     }
+      
+       
+        
+    </style>
+</head>
+<body >
+    <center>
+     
+   
+    <div class="f1">
+        <strong><em style="border-image-source: url(https://cdn.pixabay.com/photo/2016/09/06/15/16/autumn-1649362_960_720.jpg); border-style: groove; border-radius: 20px; border-image-slice: 40;">Library Management</em></strong>
+        
+        <div class="f2" >
+           
+            <h1 >Staffs Login</h1>
+           <form action="/log" method="get">
+               <p>
+                   Enter UserId
+               </p>
+               <input type="text" id="UserId" required name="Userid">
+               <p>password</p>
+               <input type="password"  id="pas" required name="password">
+               <br>
+
+               <button type="submit" onclick="sub()">sumbit</button> 
+           </form>
+           <script>
+               /*function sub()
+               {
+                   let UserId=document.getElementById("UserId").value;
+                   let password=document.getElementById("pas").value;
+                   if(UserId=='vediyappan'&&password=='Rajammal')
+                   {
+                       open("mainpage.html");
+                   }
+                   else{
+                       document.write("password is wrong");
+                   }
+               }*/
+
+           </script>
+           
+        </div>
+        <div class="f3">
+            
+            <h1>Student Login</h1>
+           <form action="/lostudent" method="get">
+               <p>
+                   Enter UserId
+               </p>
+               <input type="text" class=""  name="student userId"required>
+               <p>password</p>
+               <input type="password" value="" class="" required name="studentpassword">
+               <br>
+
+             <button type="submit">sumbit</button>
+               
+           </form>
+           <button>Forgot password</button>
+           <br>
+            <button onclick="sign()">SignUp</button>
+           <script>
+               function sign()
+               {
+                   open("sig up.html");
+               }
+           </script>
+           <button onclick="b()">Back</button>
+        </div>
+       
+    </div>
+    
+    <script>
+        function b()
+        {
+            open('home.html');
+        }
+    </script>
+    </center>
+</body>
+</html>

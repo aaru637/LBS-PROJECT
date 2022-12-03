@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        p{
+            font-size: smaller;
+        }
+        body{
+            
+           
+            background-repeat: no-repeat;
+           animation: d 15s infinite;
+           background-size: cover;
+           
+        }
+        @keyframes d{
+            from{background-image: url('https://i.pinimg.com/originals/ec/dd/ed/ecdded0786af12162a571cc3b57b56b3.jpg');}
+            to{background-image: url('https://i.pinimg.com/236x/ee/8b/0d/ee8b0d7ba91a40aa7b7934cb8cda5c58.jpg');}
+        }
+
+      
+        .f1{
+           
+           display: flex;
+            margin-top: 9%;
+            width: 50%;
+           background-image: linear-gradient(to left,rgb(240, 241, 221),yellow);
+           border-radius: 10px;
+           
+           
+        }
+        .f1>div{
+            flex: 1;
+        }
+       
+        }
+        img{
+            border-style: none;
+            border-radius: 100px;
+           
+           
+           
+        }
+        .f2{
+            width: 200px;
+            
+            
+            
+            font-style: italic;
+           
+        }
+        .f3{
+            width: 200px;
+          
+        }
+
+        button{
+            color: aqua;
+            background-color:blue;
+        }
+        h1{
+            color: aqua;
+        
+           
+        }
+       
+        input{
+            border-style: solid;
+            border-radius: 20px;
+            border-color: aqua;
+        }
+     
+        p{
+            font-size: large;
+            
+        }
+      
+     input:hover{
+         border-color: rgb(183, 0, 255);
+         border-radius: 10px;
+       
+     }
+     button{
+         border: none;
+         width: 100px;
+         margin-top: 10px;
+         color: yellow;
+        
+     background-color: brown;
+        
+     }
+     button:hover{
+         background-color: rgb(0, 102, 255);
+     }
+     p{
+         color: rgb(189, 52, 52);
+         font-family: 'Times New Roman', Times, serif;
+         font-style: italic;
+     }
+      
+       
+        
+    </style>
+</head>
+<body >
+    <center>
+     
+        <strong><em><marquee behavior="" direction=""><h1 style="color: blue;">Library Management System</h1></marquee></em></strong>
+    <div class="f1">
+       
+        
+        <div class="f2" >
+           
+            <h1 >Staffs Login</h1>
+           <form action="/stafflog" method="get">
+               <p>
+                   Enter UserId
+               </p>
+               <input type="text" id="UserId" name="userid1" required>
+               <p>password</p>
+               <input type="password"  id="pas" name="password1" required>
+               <br>
+
+               <button type="submit" onclick="sub()">sumbit</button> 
+           </form>
+           <br> <button onclick="signs()">SignUp</button>
+           <button onclick="bs()">Back</button>
+           <script>
+               /*function sub()
+               {
+                   let UserId=document.getElementById("UserId").value;
+                   let password=document.getElementById("pas").value;
+                   if(UserId=='vediyappan'&&password=='Rajammal')
+                   {
+                       open("mainpage.html");
+                   }
+                   else{
+                       document.write("password is wrong");
+                   }
+               }*/
+               function signs()
+               {
+                   open("staffsignup.html");
+               }
+               function bs()
+        {
+            open('home.html');
+        }
+
+           </script>
+           
+        </div>
+        <div class="f3">
+            
+            <h1>Student Login</h1>
+           <form action="/studentlog" method="get">
+               <p>
+                   Enter UserId
+               </p>
+               <input type="text" class="" name="username" required>
+               <p>password</p>
+               <input type="password" value="" class="" name="'password"
+               required>
+               <br>
+
+             <button type="submit">sumbit</button>
+             <br>
+             
+               
+           </form>
+    
+           <br>
+            <button onclick="sign()">SignUp</button>
+           <script>
+               function sign()
+               {
+                   open("sig up.html");
+               }
+           </script>
+           <button onclick="b()">Back</button>
+        </div>
+       
+    </div>
+    
+    <script>
+        function b()
+        {
+            open('home.html');
+        }
+    </script>
+    </center>
+</body>
+</html>

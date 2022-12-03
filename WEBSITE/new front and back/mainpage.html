@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        body{
+            border-style: double;
+            border-radius: 10px;
+            border-color: blue;
+            background-image:url('https://i.pinimg.com/236x/00/61/01/006101e4e7790725a5fbd2826923121b.jpg') ;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+       
+        .st{
+            width: 300px;
+            height: 500px;
+            background-image: linear-gradient(to right,rgb(240, 241, 221),pink);
+            animation-name: st;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            border-style: outset;
+            border-color: aqua;
+            border-radius: 10px;
+           
+        }
+       
+        .firstdiv{
+            display: flex;
+            margin-top: 70px;
+        }
+        .firstdiv > div {
+            flex: 2;
+        }
+        .seconddiv{
+            display: flex;
+           margin-top: 10px;
+        }
+        .seconddiv > div {
+            flex: 2;
+        }
+        .thirddiv{
+            display: flex;
+            margin-top: 70px;
+           
+        }
+        .thirddiv > div {
+            flex: 2;
+        }
+        .f3{
+            display: flex;
+            margin-top: 5px;
+            
+           
+        }
+        .f3 > div{
+            flex: 2;
+        }
+        button{
+            border: none;
+            width: 100px;
+            height: 30px;
+            color: rgb(153, 30, 210);
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(96, 230, 34);
+        }
+        em{
+            color: rgb(255, 0, 0);
+        }
+        .i{
+            border-radius: 20px;
+            background-image: -moz-linear-gradient(to right,rgb(168, 231, 22),red);
+        }
+        img{
+            border: none;
+            border-radius: 30px;
+        }
+        .ac{
+            width: 70px;
+            animation-name: vi;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes v{
+            0%{transform: rotate(0deg);}
+            10%{transform: rotate(-20deg);}
+            20%{transform: rotate(20deg);}
+            30%{transform: rotate(0deg);}
+            40%{transform: rotate(20deg);}
+            50%{transform: rotate(-20deg);}
+            60%{transform: rotate(0deg);}
+            70%{transform: rotate(-20deg);}
+            80%{transform: rotate(20deg);}
+            90%{transform: rotate(0deg);}
+            100%{transform: rotate(-20deg);}
+        }
+        
+       
+        .a2{
+            width: 70px;
+
+
+        }
+        .a:hover{
+            color: green;
+        }
+        #li{
+            animation-name: li;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes li{
+            from{color: brown;}
+            to{color: blue;}
+        }
+        #oh{
+            visibility: hidden;
+        }
+        #oh1{
+            visibility: hidden;
+        }
+      
+       
+
+    
+        
+    </style>
+</head>
+<body>
+   <center><div  class="i" > <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86QjID5IzNGnQaER1NttL3oSY6MaMRi386EIY80PoFw&s" alt="please wait" srcset="" ></div>
+        <figcaption><strong><em style="border-image-source: url(https://cdn.pixabay.com/photo/2016/09/06/15/16/autumn-1649362_960_720.jpg); border-style: groove; border-radius: 20px; border-image-slice: 40;border-image-slice: 50;" id="li">Library Management</em></strong></figcaption>
+     
+ 
+     
+        <div class="st" style="padding: 20px;">
+           <div class="a2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3wlmTO2pKRJT4_GqEI40Tb9fLO0ezguUYbu13RM13qWIs2ssj1qrkmrnLvV81of0KfN4&usqp=CAU" alt="please wait" srcset="" class="ac" onclick="pro()"></div>
+              <p onclick="pro()"  action="/pro"
+              class="Profile" style="border: outset; border-radius: 40px; border-color: aqua; background-image: linear-gradient(to left,violet,indigo,blue,green,yellow,orange,red); -webkit-background-clip: text;color: transparent;">Profile</p>
+           <div class="firstdiv">
+            <div class="item1">
+               <button onmousemove="re()">Request Book</button>
+            <div id="oh" onmouseleave="dre()">
+                <button onclick="author()">Authorwise</button>
+                <br>
+                <button onclick="ti()">Titlewise</button>
+            </div>
+               <script>
+                  
+               
+                     function re(){
+                            document.getElementById('oh').style.visibility='visible';
+                             }
+                      function dre(){
+                                   document.getElementById('oh').style.visibility='hidden';
+                            }
+                            function author()
+                            {
+                                open('author.html');
+                            }
+                            function ti()
+                            {
+                                open('title.html');
+                            }
+               </script>
+            </div>
+            <div>
+                <button onclick="reserve()">Reserve Book</button>
+            </div>
+            </div> 
+            <div class="seconddiv">
+            <div>
+               <button onclick="fine()">Pay Fine</button>
+            </div>
+
+            <div>
+                <button onclick="ren()">Renew Book</button>
+                <script>
+                     function fine()
+                    {
+                        window.open("fine.html");
+                    }
+                     function reserve()
+                    {
+                        window.open("reserve.html");
+                    }
+                    function ren()
+                    {
+                        window.open("renewal.html");
+                    }
+                    function pro()
+                    {
+                        open("profile.html");
+                    }
+                    
+                    function lo()
+                    {
+                        open('log in.html')
+                    }
+                    function re1(){
+                            document.getElementById('oh1').style.visibility='visible';
+                             }
+                      function dre1(){
+                                   document.getElementById('oh1').style.visibility='hidden';
+                            }
+                            function staff()
+                            {
+                                open('staffsignup.html');
+                            }
+                            function student()
+                            {
+                                open('sig up.html');
+                            }
+                    
+                </script>
+            </div>
+          </div>
+          <div class="thirddiv">
+            <div>
+                <button onclick="re1()"> NewUser Register</button>
+                <div id="oh1" onmouseout="dre1()">
+                 <button onclick="staff()">staff</button>
+                   <br>
+                   <button onclick="student()">student</button>
+               </div>
+            </div>
+            <div>
+               <button onclick="lo()">login</button>
+            </div>
+          </div>
+          <br>
+          <strong><em >Contact Us</em></strong>
+        <div class="f3">
+           <div><p><a href="mailto:apjakgvs@7.com">Email</a></p></div>
+           <div><p><a href="https://www.whatsapp.com/">Others</a></p></div>
+        </div>
+        </div>
+      
+        
+    </center> 
+</body>
+</html>

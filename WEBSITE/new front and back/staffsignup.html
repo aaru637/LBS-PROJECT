@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+   
+ <style>
+     body{
+         background-image: linear-gradient(to left,pink,rgb(42, 176, 209),rgb(187, 179, 192));
+         animation-name: bo;
+         animation-duration: 10s;
+         animation-iteration-count: infinite;
+         animation-direction: alternate-reverse;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     @keyframes bo{
+        from{background-image: url('https://wallpaperaccess.com/full/6922227.png');}
+            to{background-image: url('https://i.pinimg.com/736x/d2/28/d1/d228d10b59cc9f27234d56e5a766c0ca.jpg');}
+       
+
+     }
+
+    
+     .st{
+         background-color: aqua;
+         border-style: outset;
+         border-radius: 20px;
+         border-color: rgb(21, 219, 64);
+        
+         width: 300px;
+         animation-name: b;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         animation-name: vi ;
+     }
+     @keyframes v{
+            0%{transform: rotate(0deg);}
+            10%{transform: rotate(-1deg);}
+            20%{transform: rotate(1deg);}
+            30%{transform: rotate(0deg);}
+            40%{transform: rotate(1deg);}
+            50%{transform: rotate(-1deg);}
+            60%{transform: rotate(0deg);}
+            70%{transform: rotate(-1deg);}
+            80%{transform: rotate(1deg);}
+            90%{transform: rotate(0deg);}
+            100%{transform: rotate(-1deg);}
+
+        }
+     form{
+        
+         font-style: italic;
+        
+        
+        }
+        @keyframes b{
+            from {border-style: dashed;}
+            to{border-style: double;}
+            from{border-color: yellow;}
+            to{border-color: rgb(161, 28, 28);}
+        }
+
+     p{
+         color: rgb(119, 0, 255);
+     }
+     input{
+         border-style: groove;
+         border-radius: 20px;
+         border-color: aqua;
+     }
+     input:hover{
+         border-color: rgb(4, 0, 255);
+         border-radius: 10px;
+        
+       
+     }
+     button{
+         background-color: #b23364;
+         border: none;
+         width: 90px;
+         border-color: aqua;
+         border-style: outset;
+     }
+     button:hover{
+        background-color: #5783db;
+     }
+     .su{
+         width: 90px;
+         background-color: #33b249;
+     }
+     .su:hover{
+        background-color: #5783db;
+
+     }
+     #he{
+         animation-name: hr 5s infinite;
+         color: yellow;
+     }
+     @keyframes hr{
+         from{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+         to{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+     }
+     h3{
+         color: red;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+       
+ </style>
+</head>
+<body>
+    <center>
+        <div  class="i" > <figure>
+            <figcaption><strong><em > <marquee behavior="" direction=""> <h1 id="he">Library Management System </h1></marquee></em></strong></figcaption>
+         
+     
+         
+            <div class="st">
+            <h3  >Staff Register</h3>
+            <form action="/staffsign" method="post"name="f1" >
+                <p> UserId</p>
+                <input type="text"  onchange="ch1()" name="userid">
+                <p>Enter the Name</p>
+                <input type="text" required  onchange="ch1()" name="username">
+                <p>Enter id card Number</p>
+                <input type="text" required minlength="7" name="idnumber">
+                <p>Enter the Phone Number</p>
+                
+                <input type="text"  id="ph" value="+91-" required onchange="pho()" name="phonenumber">
+                <script>
+                    function pho()
+                    {
+                       // let ima=document.getElementById('ph').value;
+                        let ima=document.getElementById('ph').value;
+                        if(ima.size>2097152)
+                        {
+                            document.getElementById('p').innerHTML='filel size is maximum 2Mb';
+                        }
+                        else if(ima.size<0){
+                            document.getElementById('p').innerHTML='filel size is minimum 0Mb';
+                        }
+                        else{
+                            document.getElementById('p').innerHTML='';
+
+                        }
+                    }
+                </script>
+                <p>Enter Email Id</p>
+                <input type="email" name="email" id="em" required>
+                
+                <p>Create the Password</p>
+                <input type="password" name="password" id="pa1" required>
+                <p>Retype password </p>
+                <input type="password" name="spassword" id="pa2" onmouseout="ma()" required>
+                <p id="pr"> </p>
+                <br>
+                <input type="button" value="submit" onclick="submit()" class="su">
+            </form>
+                <script>
+                   
+                    
+            </script>
+              
+           
+             <br>
+            <button onclick="ba()" style=" border-radius: 10px;">Back</button>
+            <button onclick="lo()" style=" border-radius: 10px;">log in</button>
+            <script>
+            function ba()
+            {
+                open("home.html");
+            }
+            function ch1()
+            {
+                document.getElementById("fo").style.borderStyle="solid";
+                document.getElementById("fo").style.backgroundColor="blue";
+            }
+            function lo()
+            {
+                open("log in.html");
+            }
+            function ma()
+            {
+                let first=document.getElementById("pa1").value;
+                let second=document.getElementById("pa2").value;
+                if (first==second) {
+                    document.getElementById('pr').innerHTML='same password';
+                    
+                }
+                else{
+                    document.getElementById('pr').innerHTML='password does not match';
+                    document.getElementById('pr').style.color='red';
+
+                }
+
+
+            }
+            function submit()
+            {
+                open('mainpage.html');
+            }
+          
+           
+            
+            </script>
+            </div>
+          </div>
+    </center>
+</body>
+</html>
